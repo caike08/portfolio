@@ -1,129 +1,190 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="theme-color" content="#4CAF50">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="description" content="Front-end Web Developer plus Musician">
-    <meta name="author" content="Carlos Henrique Motta">  
-    <meta charset="UTF-8">  
-    <link rel="shortcut icon" href="img/favicon.png">  
-	
-	<title>Caike Motta</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end developer slash musician">
+  <meta name="author" content="Carlos Henrique Motta">
+  <meta name="keywords" content="HTML,CSS,JavaScript,Angular,React,Ionic,Git">
+  <link rel="shortcut icon" href="img/favicon.png">
 
-	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="css/clear.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="./vendor/fontawesome-free-5.9.0-web/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Caike Motta | @caike08</title>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72174037-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-72174037-1');
+  </script>
 </head>
+
 <body>
-	<header>
-		<div class="header-container">
-			<a href="index.html"><h1>Caike Motta</h1></a>
+  <header class="main-header">
+    <nav>
+      <a class="logo" href="/">Caike Motta</a>
+      <nav class="nav-about">
+        <ul>
+          <li>
+            <a href="#about">about</a>
+          </li>
+          <li>
+            <a href="#contact">contact me</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-social">
+        <a href="https://github.com/caike08/" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
 
-			<button class="menu-hamburger" id="toggle-menu"></button>
-			<nav id="menu">
-				<a href="#aboutme">About me</a>
-				<a href="#getintouch">Get in touch</a>		
-			</nav>
-		</div>
-	</header>
-	<div class="content-container">
-		<section class="about-me" id="aboutme">
-			<h2>About me</h2>
+  <main class="main-content">
+    <header id="welcome">
+      <h1>Hello!</h1>
+      <div class="welcome-img"></div>
+    </header>
 
-			<figure>
-				<img src="img/profile.jpg" alt="Hello!">
-			</figure>
+    <div class="content" id="about">
+      <section>
+        <div class="container main-container">
+          <p>I am a front-end developer, currently working at <strong><a target="_blank"
+                href="https://www.solidaridadnetwork.org/">Solidaridad Network</a></strong>,
+            using technology to create a positive impact in people's lives, through technological inclusion.
+          </p>
+          <p>
+            I aim to
+            help develop a better world by using technology as a key to empowering people and help them to see
+            technology as a life changer.
+          </p>
+        </div>
+      </section>
 
-			<p>Hey, I'm Carlos Henrique, also known as Caike. I am a software engineering student from <a href="http://www.univas.edu.br/" target="_blank">Universidade do Vale do Sapucaí</a> based in Brazil who has taken part of an exchange program at <a href="https://www.elte.hu/en" target="_blank">Eötvös Loránd University</a> in Budapest, Hungary.</p>
+      <section id="hobbies">
+        <div class="container">
+          <div class="row">
+            <div class="item col-md-3 col-sm-6 col-xs-12">
+              <div class="item-title">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Places I've worked at</h3>
+              </div>
+              <div class="item-content">
+                <ul>
+                  <li>
+                    <a href="https://www.solidaridadnetwork.org/" target="_blank" rel="noopener noreferrer">Solidaridad
+                      Network</a>
+                  </li>
+                  <li>
+                    <a href="http://amagafa.com.br/#home/" target="_blank" rel="noopener noreferrer">Amagafa TECH</a>
+                  </li>
+                  <li>
+                    <a href="http://www.b2ml.com.br/b2ml/Home/" target="_blank" rel="noopener noreferrer">B2ML
+                      Sistemas</a>
+                  </li>
+                  <li>
+                    <a href="http://http://en.totvs.com/" target="_blank" rel="noopener noreferrer">TOTVS</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="item col-md-3 col-sm-6 col-xs-12">
+              <div class="item-title">
+                <i class="fas fa-code"></i>
+                <h3>Web Playground</h3>
+              </div>
+              <div class="item-content">
+                <ul>
+                  <li><a href="https://github.com/caike08/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                  <li><a href="http://codepen.io/caike08/" target="_blank" rel="noopener noreferrer">CodePen</a></li>
+                </ul>
+              </div>
+            </div>
 
-			<p>Web Development is, for sure, one of my biggest passions. As well as a web developer, I am also a bass and guitar player.</p>
+            <div class="item col-md-3 col-sm-6 col-xs-12">
+              <div class="item-title">
+                <i class="fas fa-guitar"></i>
+                <h3>Musical Project</h3>
+              </div>
+              <div class="item-content">
+                <ul>
+                  <li><a href="https://www.facebook.com/MolotovConspiracy/" target="_blank"
+                      rel="noopener noreferrer">Molotov Conspiracy</a></li>
+                  <li><a href="http://soundcloud.com/caike-motta/" target="_blank"
+                      rel="noopener noreferrer">Soundcloud</a></li>
+                </ul>
+              </div>
+            </div>
 
-			<p>I have worked as front-end developer at <a href="http://www.b2ml.com.br/b2ml/Home" target="_blank">B2ML Sistemas</a>, working with CSS3, HTML, JavaScript and a bit of PHP. I also worked as a Protheus 10 instructor at <a href="http://http://en.totvs.com/" target="_blank">TOTVS</a> for over a year. During my exchange program, I took part in a project group which was responsible for building an educational platform, based on <a href="https://canvas.elte.hu/">Canvas</a>, to help professors and students share content in academia.</p>
+            <div class="item col-md-3 col-sm-6 col-xs-12">
+              <div class="item-title">
+                <i class="fas fa-mug-hot"></i>
+                <h3>Coffee Break</h3>
+              </div>
+              <div class="item-content">
+                <ul>
+                  <li><a href="http://instagram.com/caike08/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  </li>
+                  <li><a href="https://www.flickr.com/photos/99609920@N05/" target="_blank"
+                      rel="noopener noreferrer">Flickr</a></li>
+                  <li><a href="http://steamcommunity.com/id/caike08/" target="_blank" rel="noopener noreferrer">Steam
+                      ID</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			<div class="row">
-				<div class="item col-md-3 col-sm-6 col-xs-12">
-					<div class="icon-holder">
-						<label class="work"></label>
-					</div>	
-					<div class="content">
-						<h3>Places I've worked at</h3>
+    </div>
+  </main>
 
-						<ul>
-							<li><a href="http://http://en.totvs.com/" target="_blank">TOTVS</a></li>
-							<li><a href="http://www.b2ml.com.br/b2ml/Home" target="_blank">B2ML Sistemas</a></li>
-						</ul>
-					</div>
-				</div>
+  <footer id="contact">
+    <div class="container">
+      <h2>Get in touch with me</h2>
 
-				<div class="item col-md-3 col-sm-6 col-xs-12">
-					<div class="icon-holder">
-						<label class="webdev"></label>
-					</div>	
-					<div class="content">
-						<h3>Web Playground</h3>
+      <div class="item">
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/caikemotta/" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/caike08/" rel="noopener noreferrer">
+              <i class="fab fa-twitter-square"></i>
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="mailto:caike07@gmail.com">
+              <i class="fas fa-envelope"></i>
+              E-mail
+            </a>
+          </li>
+        </ul>
 
-						<ul>
-							<li><a href="https://github.com/caike08" target="_blank">GitHub</a></li>
-							<li><a href="http://codepen.io/caike08/" target="_blank">CodePen</a></li>	
-						</ul>
-					</div>
-				</div>
+        <p class="copyright"><span id="date"></span> &copy; <a href="https://caike08.github.io/cv.io/" target="_blank"
+            rel="noopener noreferrer">Carlos Henrique Motta</a></p>
+      </div>
+    </div>
+  </footer>
 
-				<div class="item col-md-3 col-sm-6 col-xs-12">
-					<div class="icon-holder">
-						<label class="musicproj"></label>
-					</div>	
-					<div class="content">
-						<h3>Musical Project</h3>
-
-						<ul>
-							<li><a href="https://www.facebook.com/MolotovConspiracy" target="_blank">Molotov Conspiracy</a></li>
-							<li><a href="http://soundcloud.com/caike-motta/" target="_blank">Soundcloud</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="item col-md-3 col-sm-6 col-xs-12">
-					<div class="icon-holder">
-						<label class="coffeebreak"></label>
-					</div>	
-					<div class="content">
-						<h3>Coffee Break</h3>
-
-						<ul>
-							<li><a href="http://instagram.com/caike08">Instagram</a></li>
-							<li><a href="https://www.flickr.com/photos/99609920@N05/" target="_blank">Flickr</a></li>
-							<li><a href="http://steamcommunity.com/id/caike08/" target="_blank">Steam ID</a></li>
-						</ul>
-					</div>
-				</div>
-		</div>
-	</div>
-
-	</section>
-
-	<footer>
-		<div class="footer-container" id="getintouch">
-			<h2>Get in touch with me</h2>
-
-			<div class="social-media-container">
-				<a href="https://www.facebook.com/Caike08" class="facebook" target="_blank"></a>
-				<a href="https://plus.google.com/+CaikeMotta/" class="googleplus" target="_blank"></a>
-				<a href="https://br.linkedin.com/in/caikemotta" class="linkedin" target="_blank"></a>
-				<a href="https://twitter.com/caike08" class="twitter"></a>
-				<a href="https://www.youtube.com/user/TheCaike08" class="youtube" target="_blank"></a>
-				<a href="mailto:caike07@gmail.com" class="gmail"></a>
-			</div>
-		</div>
-	</footer>
-
-	<script src="js/index.js"></script>
-	<script src="js/classie.js"></script>
+  <script src="./js/index.js"></script>
 </body>
+
 </html>

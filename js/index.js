@@ -1,34 +1,25 @@
-function init() {
-    window.addEventListener('scroll', function(e){
-        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-            shrinkOn = 80,
-            header = document.querySelector("header");
-        if (distanceY > shrinkOn) {
-            classie.add(header,"smaller");
-        } else {
-            if (classie.has(header,"smaller")) {
-                classie.remove(header,"smaller");
-            }
-        }
-    });
+const init = () => {
+  document
+    .addEventListener('DOMContentLoaded', () => {
+      const date = document.getElementById('date');
+      date.innerHTML = new Date().getFullYear();
 
-    var menu = document.getElementById("menu");
 
-    
-
-    document.getElementById("toggle-menu").addEventListener("click", function(){
+      window.addEventListener('scroll', (e) => {
+        const distanceY = window.pageYOffset || document.documentElement.scrollTop;
+        const shrinkOn = 59;
+        const header = document.querySelector('header');
         
-        console.log("clicked");
-
-        if(menu.style.display != "block") {
-            menu.style.display = "block";
+        if(distanceY > shrinkOn) {
+          header.classList.add('sticky');
         }
-        else menu.style.display = "none";
-
-        var menuOpt = document.addEventListener("click", function(e) {
-
-        });
+        else {
+          if(header.classList.contains('sticky')) {
+            header.classList.remove('sticky');
+          }
+        }
     });
+  })
 }
 
 window.onload = init();
