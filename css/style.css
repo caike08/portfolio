@@ -147,7 +147,7 @@ main a:active {
 }
 
 .main-content header .welcome-img {
-  background: url('../img/home.jpg') no-repeat 0 0;
+  background: url('../img/home.webp') no-repeat 0 0;
   background-size: cover;
   position: fixed;
   opacity: .4;
