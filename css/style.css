@@ -74,6 +74,10 @@ body {
   font-size: 0.9rem;
 }
 
+@media (max-width: 900px) {
+  .main-header { display: none; }
+}
+
 @media (max-width: 1024px) {
   .main-header .nav-about {
     justify-content: center;
@@ -91,6 +95,7 @@ main a {
   color: var(--color-yellow);
   text-decoration: none;
   cursor: pointer;
+  transition: all cubic-bezier(0.12, 0.00, 0.12, 1.00) .2s;
 }
 
 main a:hover,
@@ -99,16 +104,24 @@ main a:active,
 main a:visited {
   text-decoration: none;
   color: var(--color-yellow);
-  transition: all 0.4s ease;
 }
 
-main a:hover::after {
+main a::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
-  border: .5px solid var(--color-yellow);
   width: 100%;
+  height: 1px;
+  background-color: var(--color-yellow);
+  transition: all cubic-bezier(0.12, 0.00, 0.12, 1.00) .2s;
+  opacity: 0;
+}
+
+main a:hover::after {
+  transform: translateY(1.5px);
+  opacity: 1;
+
 }
 
 .main-content header {
