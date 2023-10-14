@@ -5,7 +5,7 @@ const useToasty = (animationDuration: number) => {
   const [playing, setPlaying] = useState(false)
 
   useEffect(() => {
-    setAudio(new Audio('/src/assets/toasty.mp3'))
+    setAudio(new Audio('../src/assets/toasty.mp3'))
   }, [])
 
   return {
