@@ -1,9 +1,10 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import css from './style.module.scss'
+
 import { HobbyPropType } from '../../types/hobby'
 
-import css from './style.module.scss'
 
 const HobbyList = ({
   title,

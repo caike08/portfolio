@@ -5,6 +5,8 @@ import {
   faMugHot
 } from '@fortawesome/free-solid-svg-icons'
 
+import css from './style.module.scss'
+
 import {
   WORKPLACES,
   WEB_PLAYGROUND,
@@ -13,7 +15,6 @@ import {
 } from '../../constants/hobbies.const'
 import HobbyList from '../hobby-list/HobbyList'
 
-import css from './style.module.scss'
 
 const HobbiesSection = () => {
   return (

@@ -1,12 +1,12 @@
 import type { IconProp } from "@fortawesome/fontawesome-svg-core"
 
-type HobbyPropType = {
+interface HobbyPropType {
   title: string,
   hobbies: Hobby[],
   icon?: IconProp,
 }
 
-type Hobby = {
+interface Hobby {
   hobby: string,
   icon?: IconProp,
   href: string,

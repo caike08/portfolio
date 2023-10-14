@@ -9,17 +9,17 @@ const AboutSection: FC = () => {
         <h2 className={css.title}>/about</h2>
 
         <p className={css.description}>
-          My name is Carlos Henrique Motta, and I'm a Front-end developer/UX from Brazil (🇧🇷).
-          I've been working with web development since 2013.
+          My name is Carlos Henrique Motta, and I&apos;m a Front-end developer/UX from Brazil (🇧🇷).
+          I&apos;ve been working with web development since 2013.
         </p>
 
         <p className={css.description}>
-          Experience-wise, I've worked at <a href='https://www.solidaridadnetwork.org/' className={css.link}>Solidaridad Network</a>, 
-          using technology to create a positive impact in people's lives, through technological inclusion.
+          Experience-wise, I&apos;ve worked at <a href='https://www.solidaridadnetwork.org/' className={css.link}>Solidaridad Network</a>, 
+          using technology to create a positive impact in people&apos;s lives, through technological inclusion.
         </p>
 
         <p className={css.description}>
-          I've also worked as a Front-end / UI Developer at <a href='https://www.emplifi.io/' className={css.link}>Emplifi</a>,
+          I&apos;ve also worked as a Front-end / UI Developer at <a href='https://www.emplifi.io/' className={css.link}>Emplifi</a>,
           creating new and maintaining existing UI components, cooperating with product development feature teams,
           coding across all product sections, and working closely with UI/UX design team.
         </p>

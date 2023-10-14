@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import css from './style.module.scss'
+
 import { CONTACT_LIST } from '../../constants/contact.const'
 import { ContactItemType } from '../../types/contact'
 
-import css from './style.module.scss'
 
 const ContactMeSection = () => {
   return (

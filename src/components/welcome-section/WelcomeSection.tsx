@@ -1,4 +1,5 @@
 import { FC } from 'react'
+
 import css from './style.module.scss'
 
 const WelcomeSection: FC = () => {

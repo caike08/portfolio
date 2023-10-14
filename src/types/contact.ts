@@ -1,6 +1,6 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-type ContactItemType = {
+interface ContactItemType {
   title: string;
   href: string;
   icon?: IconProp;

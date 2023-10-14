@@ -1,9 +1,9 @@
-type HeaderItemType = {
+interface HeaderItemType {
   title: string,
   href: string,
 }
 
-type HeaderPropType = {
+interface HeaderPropType {
   addresses: HeaderItemType[],
   hasReachedBreakpoint: boolean,
 }

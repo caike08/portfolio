@@ -1,8 +1,9 @@
 import clsx from 'clsx'
 
+import css from './style.module.scss'
+
 import { HeaderPropType } from '../../types/header'
 
-import css from './style.module.scss'
 
 const Header = ({
   addresses,

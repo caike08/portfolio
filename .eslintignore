@@ -1,0 +1,11 @@
+/app/
+/coverage/
+/docs/
+/node_modules/
+dist/
+env.d.ts
+
+!.eslintrc.js
+!.prettierrc.js
+!.lintstagedrc.js
+
