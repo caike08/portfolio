@@ -1,0 +1,61 @@
+@use '/src/theme/mixins.scss' as *;
+
+.contactSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xxl) 0;
+  background-color: var(--color-gray);
+
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 900px;
+    gap: var(--space-l);
+    padding: 0 var(--space-m);
+  }
+
+  .title {
+    @include headline-2();
+    color: var(--color-yellow);
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    list-style: none;
+  }
+
+  .item {
+    display: flex;
+  }
+
+  .link {
+    @include paragraph();
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    gap: var(--space-xs);
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all cubic-bezier(0.12, 0.00, 0.12, 1.00) .3s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+      text-underline-offset: var(--space-xxs);
+      text-decoration-color: var(--color-yellow);
+    }
+  }
+
+  .icon {
+    color: var(--color-yellow);
+  }
+}

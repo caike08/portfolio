@@ -1,0 +1,42 @@
+@use '/src/theme/mixins.scss' as *;
+
+.aboutSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xxl) 0;
+  background-color: var(--color-gray);
+
+  .container {
+    max-width: 900px;
+    padding: 0 var(--space-m);
+  }
+
+  .title {
+    @include headline-2();
+    color: var(--color-yellow);
+  }
+
+  .description {
+    @include paragraph();
+    margin: var(--space-l) 0;
+    color: var(--color-white);
+  }
+}
+
+.link {
+  font-weight: bold;
+  color: var(--color-yellow);
+  text-decoration: none;
+  cursor: pointer;
+  transition: text-decoration cubic-bezier(0.12, 0.00, 0.12, 1.00) .3s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--color-yellow-light);
+    text-decoration: underline;
+    text-underline-offset: var(--space-xxs);
+  }
+}

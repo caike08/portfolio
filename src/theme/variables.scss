@@ -1,0 +1,62 @@
+// Global variables
+:root {
+  /* Spacing */
+  --space-xxs: 3px;
+  --space-xs: 6px;
+  --space-s: 12px;
+  --space-m: 18px;
+  --space-l: 24px;
+  --space-xl: 36px;
+  --space-xxl: 48px;
+
+  /* Box Shadow */
+  --box-shadow-normal: 0 1px 3px 0 rgba(0, 0, 0, .1);
+  --box-shadow-big: 0 8px 24px 0 rgba(0, 0, 0, .15);
+
+  /* Colors */
+  --color-yellow: #ffd509;
+  --color-yellow-light: #ffda1f;
+  --color-yellow-strong: #e0bb00;
+  --color-gray: #333;
+  --color-gray-strong: #292929;
+  --color-gray-stronger: #222;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-shadow: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, #333333 100%);
+
+  /* Font */
+  --font-family: 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Tahoma',
+    Roboto, 'Ubuntu', 'Cantarell', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-size-paragraph: 1.1rem;
+  --line-height-paragraph: 1.5;
+  --font-weight-paragraph: 400;
+  --font-size-small: 0.9rem;
+  --line-height-small: 1.5;
+  --font-weight-small: 400;
+  --font-size-headline-1: 2.2rem;
+  --line-height-headline-1: 1;
+  --font-weight-headline-1: 300;
+  --font-size-headline-2: 2rem;
+  --line-height-headline-2: 1;
+  --font-weight-headline-2: 400;
+  --font-size-headline-3: 1.8rem;
+  --line-height-headline-3: 1;
+  --font-weight-headline-3: 400;
+  --font-size-headline-4: 1.6rem;
+  --line-height-headline-4: 1;
+  --font-weight-headline-4: 400;
+  --font-size-headline-5: 1.11rem;
+  --line-height-headline-5: 1;
+  --font-weight-headline-5: 500;
+
+  /* Border Radius */
+  --borde-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-large: 8px;
+  --border-radius-full: 100%;
+
+  /* Height */
+  --header-height: 48px;
+  --footer-height: 75px;
+}
