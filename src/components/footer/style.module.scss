@@ -1,0 +1,44 @@
+@use '/src/theme/mixins.scss' as *;
+
+.footer {
+  z-index: 1;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--footer-height);
+  padding: 0;
+  background: var(--color-gray-stronger);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 var(--space-m);
+  }
+
+  .copyright {
+    @include small();
+    display: inline-flex;
+    gap: var(--space-xs);
+    color: var(--color-white);
+  }
+
+  .link {
+    @include small();
+    color: var(--color-white);
+    text-decoration: none;
+    transform: all cubic-bezier(0.12, 0.00, 0.12, 1.00) .3s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+      text-underline-offset: var(--space-xxs);
+      text-decoration-color: var(--color-yellow);
+    }
+  }
+}
