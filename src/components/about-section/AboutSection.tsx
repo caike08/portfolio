@@ -9,8 +9,10 @@ const AboutSection: FC = () => {
         <h2 className={css.title}>/about</h2>
 
         <p className={css.description}>
-          My name is Carlos Henrique Motta, and I&apos;m a Front-end developer/UX from Brazil (🇧🇷).
-          I&apos;ve been working with web development since 2013.
+          My name is Carlos Henrique Motta, and I&apos;m a Full-stack Developer/UX from Brazil (🇧🇷).
+          I&apos;ve been working with web development since 2017. I currently work at{' '}
+          <a href='https://ae.studio/' className={css.link}>AE Studio</a> as a Full-stack Engineer, working with
+          cool projects that increase agency.
         </p>
 
         <p className={css.description}>

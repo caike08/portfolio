@@ -2,6 +2,10 @@ import { Hobby } from '../types/hobby'
 
 const WORKPLACES: Hobby[] = [
   {
+    hobby: 'AE Studio',
+    href: 'https://ae.studio/',
+  },
+  {
     hobby: 'Emplifi',
     href: 'https://www.emplifi.io/',
   },
@@ -65,8 +69,6 @@ const COFFEE_BREAK: Hobby[] = [
 ]
 
 export {
-  WORKPLACES,
-  WEB_PLAYGROUND,
-  MUSICAL_PROJECT,
-  COFFEE_BREAK
+  COFFEE_BREAK, MUSICAL_PROJECT, WEB_PLAYGROUND, WORKPLACES
 }
+
