@@ -2,6 +2,10 @@ import { Hobby } from '../types/hobby'
 
 const WORKPLACES: Hobby[] = [
   {
+    hobby: 'Reply',
+    href: 'https://www.reply.com/en',
+  },
+  {
     hobby: 'AE Studio',
     href: 'https://ae.studio/',
   },

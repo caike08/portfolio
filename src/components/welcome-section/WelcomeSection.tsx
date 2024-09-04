@@ -17,7 +17,7 @@ const WelcomeSection: FC = () => {
       <div className={css.welcomeImage} />
       <div className={css.titleContainer}>
         <h1 className={css.title}>Carlos Henrique Motta</h1>
-        <h5 className={css.description}>Full-stack Developer & UX</h5>
+        <h5 className={css.description}>Front-end Developer & UX</h5>
       </div>
       <ToastSlideIn show={isPlayingToasty} />
     </section>
