@@ -1,21 +1,24 @@
-// React hook to return a boolean indicating if the user reached the desired breakpoint
+// React hook returning a boolean indicating if the user reached the desired breakpoint
 
 import { useEffect, useState } from 'react'
 
 export const useScrolling = (breakpoint: number) => {
-  const [isScrolling, setIsScrolling] = useState(false)
+  const [hasReachedBreakpoint, setHasReachedBreakpoint] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolling(window.scrollY > breakpoint)
+    const handleChange = () => {
+      setHasReachedBreakpoint(window.scrollY > breakpoint)
     }
 
-    window.addEventListener('scroll', handleScroll)
+    // Sync with the current position on mount (e.g. page loaded already scrolled)
+    handleChange()
+
+    window.addEventListener('scroll', handleChange, { passive: true })
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', handleChange)
     }
-  }, [isScrolling, breakpoint])
+  }, [breakpoint])
 
-  return isScrolling
+  return hasReachedBreakpoint
 }

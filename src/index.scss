@@ -1,4 +1,4 @@
-@import './theme/variables.scss';
+@use './theme/variables.scss';
 
 * {
   margin: 0;
@@ -9,4 +9,21 @@
 
 body {
   background: var(--color-gray-strong);
+}
+
+section[id] {
+  // Contributes the fixed header height so anchored section headings are not hidden below it
+  scroll-margin-top: var(--header-height);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }

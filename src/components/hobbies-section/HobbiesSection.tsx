@@ -20,6 +20,7 @@ const HobbiesSection = () => {
   return (
     <section id='hobbies' className={css.hobbiesSection}>
       <div className={css.container}>
+        <h2 className='visually-hidden'>/hobbies</h2>
         <HobbyList title='Places I&apos;ve worked at' icon={faLaptopCode} hobbies={WORKPLACES} />
         <HobbyList title='Web Playground' icon={faCode} hobbies={WEB_PLAYGROUND} />
         <HobbyList title='Musical Projects' icon={faGuitar} hobbies={MUSICAL_PROJECT} />

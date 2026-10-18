@@ -1,5 +1,5 @@
-import { FC } from 'react'
 import { useKonami } from 'react-konami-code'
+
 
 import css from './style.module.scss'
 
@@ -8,7 +8,7 @@ import ToastSlideIn from '../toast-slide-in/ToastSlideIn'
 
 const EASTER_EGG_TIMEOUT = 1400
 
-const WelcomeSection: FC = () => {
+const WelcomeSection = () => {
   const { toasty, isPlayingToasty } = useToasty(EASTER_EGG_TIMEOUT) // plays a TOASTY sound while ToastSlideIn is shown
   useKonami(toasty) // Excecute any action based on a keycode press: ↑ ↑ ↓ ↓ ← → ← → B A
 
@@ -17,7 +17,7 @@ const WelcomeSection: FC = () => {
       <div className={css.welcomeImage} />
       <div className={css.titleContainer}>
         <h1 className={css.title}>Carlos Henrique Motta</h1>
-        <h5 className={css.description}>Front-end Developer & UX</h5>
+        <p className={css.description}>Front-end Developer & UX</p>
       </div>
       <ToastSlideIn show={isPlayingToasty} />
     </section>

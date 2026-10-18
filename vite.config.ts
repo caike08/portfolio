@@ -1,20 +1,15 @@
+/// <reference types="vitest" />
 import react from '@vitejs/plugin-react-swc'
-import { PluginOption, defineConfig } from 'vite'
-import eslint from 'vite-plugin-eslint';
+import { defineConfig } from 'vite'
 
-const PLUGIN_OPTIONS: PluginOption[] = [
-  react(),
-  eslint(
-    {
-      cache: false,
-      include: ['src/**/*.{js,jsx,ts,tsx}'],
-      exclude: ['node_modules', 'dist'],
-    }
-  )
-]
-
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [...PLUGIN_OPTIONS],
+  plugins: [react()],
   base: '/portfolio/',
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './src/test/setup.ts',
+  },
 })
+

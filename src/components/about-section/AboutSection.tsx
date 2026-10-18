@@ -1,8 +1,6 @@
-import { FC } from 'react'
-
 import css from './style.module.scss'
 
-const AboutSection: FC = () => {
+const AboutSection = () => {
   return (
     <section id='about' className={css.aboutSection}>
       <div className={css.container}>
