@@ -1,9 +1,7 @@
-import {
-  faLaptopCode,
-  faCode,
-  faGuitar,
-  faMugHot
-} from '@fortawesome/free-solid-svg-icons'
+import { faCode } from '@fortawesome/free-solid-svg-icons/faCode'
+import { faGuitar } from '@fortawesome/free-solid-svg-icons/faGuitar'
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons/faLaptopCode'
+import { faMugHot } from '@fortawesome/free-solid-svg-icons/faMugHot'
 
 import css from './style.module.scss'
 

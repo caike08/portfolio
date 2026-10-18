@@ -7,22 +7,23 @@
   background-color: var(--color-gray);
 
   .container {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(min-content, 1fr));
     align-items: flex-start;
-    justify-content: space-between;
     max-width: 900px;
     gap: var(--space-l);
     padding: 0 var(--space-m);
   }
 }
 
-// coarse
-// The primary input mechanism includes a pointing device of limited accuracy, such as a finger on a touchscreen.
-
-@media only screen and (hover: none) and (pointer: coarse) and (max-width: 480px) {
+@media only screen and (max-width: 900px) {
   .hobbiesSection .container {
-    flex-direction: column;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hobbiesSection .container {
+    grid-template-columns: minmax(min-content, 1fr);
   }
 }
