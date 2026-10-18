@@ -1,6 +1,5 @@
 import { useKonami } from 'react-konami-code'
 
-
 import css from './style.module.scss'
 
 import useToasty from '../../hooks/useToasty'
@@ -17,7 +16,7 @@ const WelcomeSection = () => {
       <div className={css.welcomeImage} />
       <div className={css.titleContainer}>
         <h1 className={css.title}>Carlos Henrique Motta</h1>
-        <p className={css.description}>Front-end Developer & UX</p>
+        <p className={css.description}>Senior Software Developer / UX</p>
       </div>
       <ToastSlideIn show={isPlayingToasty} />
     </section>

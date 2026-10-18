@@ -7,10 +7,24 @@ describe('App', () => {
     render(<App />)
 
     expect(screen.getByRole('heading', { level: 1, name: /carlos henrique motta/i })).toBeInTheDocument()
+    expect(screen.getByText('Senior Software Developer / UX')).toBeInTheDocument()
     expect(screen.getByRole('navigation', { name: 'main navigation' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { level: 2, name: '/about' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { level: 2, name: '/hobbies' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { level: 2, name: '/contact me' })).toBeInTheDocument()
+  })
+
+  it('adds the most recent workplace and keeps the list CV-ordered', () => {
+    render(<App />)
+
+    const [aboutLink, listLink] = screen.getAllByRole('link', { name: 'Zup Innovation' })
+    expect(aboutLink).toHaveAttribute('href', 'https://www.zup.com.br/')
+    expect(listLink).toHaveAttribute('href', 'https://www.zup.com.br/')
+    expect(listLink).toHaveAttribute('target', '_blank')
+
+    const reply = screen.getAllByRole('link', { name: 'Reply' })[1]
+    // Zup (current) must come before Reply in the "Places I've worked at" list
+    expect(listLink.compareDocumentPosition(reply) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
   })
 
   it('renders contact links with external behavior only for absolute URLs', () => {
