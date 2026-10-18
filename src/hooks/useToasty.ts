@@ -1,29 +1,38 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react'
 
-// import.meta meta-property exposes context-specific metadata to a JavaScript module.
-// It contains information about the module, such as the module's URL.
-// toasty.mp3 is deployed to gh-pages, but isn't loaded directly.
-// based on: https://github.com/krau5/pomo/pull/9/commits/14866f670e2b5c63689beb75387c16157d636134
-const soundURL = new URL('/toasty.mp3', import.meta.url) // TODO: find a better way to import the mp3 file
+// toasty.mp3 lives under src/assets: referencing it with a relative URL lets
+// Vite resolve, hash and include the asset in dev and production builds.
+const soundURL = new URL('../assets/toasty.mp3', import.meta.url)
 
 const useToasty = (animationDuration: number) => {
-  const [audio, setAudio] = useState<HTMLAudioElement | null>(null)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const [playing, setPlaying] = useState(false)
 
   useEffect(() => {
-    setAudio(new Audio(soundURL.href))
+    audioRef.current ??= new Audio(soundURL.href)
+
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+      }
+      audioRef.current?.pause()
+    }
   }, [])
+
+  const toasty = () => {
+    if (playing) {
+      return
+    }
+
+    setPlaying(true)
+    void audioRef.current?.play()
+    timeoutRef.current = setTimeout(() => setPlaying(false), animationDuration)
+  }
 
   return {
     isPlayingToasty: playing,
-    toasty: () => {
-      if (playing) {
-        return
-      }
-      setPlaying(true)
-      void audio!.play()
-      setTimeout(() => setPlaying(false), animationDuration)
-    },
+    toasty,
   }
 }
 

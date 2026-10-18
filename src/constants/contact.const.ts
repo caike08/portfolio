@@ -1,5 +1,5 @@
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
 
 import { ContactItemType } from '../types/contact';
 

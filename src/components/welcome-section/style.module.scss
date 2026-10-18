@@ -27,12 +27,27 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/src/assets/home.webp');
+
+  // Plain WebP fallback, then the AVIF/WebP set for browsers that support image-set()
+  background-image: url('../../assets/home-lg.webp');
+  background-image: image-set(
+    url('../../assets/home-lg.avif') type('image/avif'),
+    url('../../assets/home-lg.webp') type('image/webp')
+  );
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   opacity: 0.4;
-  will-change: transform;
+}
+
+@media only screen and (hover: none) and (pointer: coarse) and (max-width: 900px) {
+  .welcomeImage {
+    background-image: url('../../assets/home-sm.webp');
+    background-image: image-set(
+      url('../../assets/home-sm.avif') type('image/avif'),
+      url('../../assets/home-sm.webp') type('image/webp')
+    );
+  }
 }
 
 .titleContainer {

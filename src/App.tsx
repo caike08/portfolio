@@ -1,5 +1,3 @@
-import { useRef } from 'react'
-
 import AboutSection from './components/about-section/AboutSection'
 import ContactMeSection from './components/contact-me-section/ContactMeSection'
 import Footer from './components/footer/Footer'
@@ -12,12 +10,11 @@ import { useScrolling } from './hooks/useScrolling'
 const SCROLLING_BREAKPOINT = 240
 
 function App() {
-  const mainRef = useRef<HTMLDivElement>(null)
   const hasReachedBreakpoint = useScrolling(SCROLLING_BREAKPOINT)
 
   return (
-    <>    
-      <main ref={mainRef}>
+    <>
+      <main>
         <Header addresses={HEADER_ADDRESSES} hasReachedBreakpoint={hasReachedBreakpoint} />
         <WelcomeSection />
         <AboutSection />

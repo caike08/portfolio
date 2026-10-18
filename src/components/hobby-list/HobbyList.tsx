@@ -15,8 +15,8 @@ const HobbyList = ({
     <div className={css.hobbyList}>
       <h4 className={css.title}>{icon && <FontAwesomeIcon icon={icon} />} {title}</h4>
       <ul className={css.list}>
-        {hobbies.map((hobby, index) => (
-          <li key={index} className={css.item}>
+        {hobbies.map((hobby) => (
+          <li key={hobby.hobby} className={css.item}>
             <a
               href={hobby.href}
               className={css.link}

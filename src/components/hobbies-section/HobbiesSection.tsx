@@ -1,9 +1,7 @@
-import {
-  faLaptopCode,
-  faCode,
-  faGuitar,
-  faMugHot
-} from '@fortawesome/free-solid-svg-icons'
+import { faCode } from '@fortawesome/free-solid-svg-icons/faCode'
+import { faGuitar } from '@fortawesome/free-solid-svg-icons/faGuitar'
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons/faLaptopCode'
+import { faMugHot } from '@fortawesome/free-solid-svg-icons/faMugHot'
 
 import css from './style.module.scss'
 
@@ -20,6 +18,7 @@ const HobbiesSection = () => {
   return (
     <section id='hobbies' className={css.hobbiesSection}>
       <div className={css.container}>
+        <h2 className='visually-hidden'>/hobbies</h2>
         <HobbyList title='Places I&apos;ve worked at' icon={faLaptopCode} hobbies={WORKPLACES} />
         <HobbyList title='Web Playground' icon={faCode} hobbies={WEB_PLAYGROUND} />
         <HobbyList title='Musical Projects' icon={faGuitar} hobbies={MUSICAL_PROJECT} />
